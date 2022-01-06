@@ -1,0 +1,141 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+
+      </title>
+      <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <style media="screen">
+        @media screen and (max-width: 400px){
+          .topnav a {
+            float: none;
+            width: 100%;
+          }
+        }
+      </style>
+  </head>
+
+    <body>
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <nav class="header" id="navbar">
+                <header>JS Documentation</header>
+                <div class="topnav">
+                  <a class="nav-link" href="#introduction">Introduction</a>
+                  <a class="nav-link" href="#variables">Variables</a>
+                  <a class="nav-link" href="#constants">Constants</a>
+                  <a class="nav-link" href="#data_types">Data Types</a>
+                  <a class="nav-link" href="#function">Function</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <div class="rightcolumn">
+            <main id="main-doc">
+                <div class="card">
+                  <section class="main-section" id="introduction">
+                    <header>Introduction</header>
+                    <div id="para">
+                      <p> JavaScript is a cross-platform, object-oriented scripting language.
+                        It is a small and lightweight language. Inside a host environment (for example, a web browser),
+                        JavaScript can be connected to the objects of its environment to provide programmatic control over them.<br><br>
+                        JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators,
+                         control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects.</p>
+                    </div>
+
+                  </section>
+                </div>
+
+                <div class="card">
+                  <section class="main-section" id="variables">
+                    <header>Variables</header>
+                    <div id="para">
+                        <p> You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+
+                          <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9).
+                            Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+
+                          <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers.
+                            Some examples of legal names are Number_hits, temp99, and _name. </p>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="card">
+                  <section class="main-section" id="constants">
+                    <header>Constants</header>
+                    <div id="para">
+                        <p>
+                            You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier:
+                            it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.<br><br>
+
+                            <code>const PI = 3.14;</code><br><br>
+
+                            A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.<br>
+
+                            The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted,
+                             the identifier is assumed to represent a variable.<br>
+
+                            You cannot declare a constant with the same name as a function or variable in the same scope. For example:<br><br>
+                          <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL<br>
+                                    CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements<br>
+                                    }</code><br><br>
+                            However, object attributes are not protected, so the following statement is executed without problems.<br><br>
+                            <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code><br><br>
+                          </p>
+                        </div>
+                  </section>
+                </div>
+
+                <div class="card">
+                  <section class="main-section" id="data_types">
+                    <header>Data Types</header>
+                    <div id="para">
+                        <p>The latest ECMAScript standard defines seven data types:</p>
+                        <p>six data types that are primitives</p>
+                        <ol>
+                          <li>Boolean. true and false.</li>
+                          <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant. </li>
+                          <li>undefined. A top-level property whose value is undefined.</li>
+                          <li>Number. 42 or 3.14159.</li>
+                          <li>String. "Howdy"</li>
+                          <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable. </li>
+                        </ol>
+                        <p>and object</p>
+                        <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform. </p>
+                      </div>
+                    </section>
+                </div>
+
+                <div class="card">
+                  <section class="main-section" id="function">
+                    <header>Function</header>
+                    <div id="para">
+                        <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:<br>
+
+                                The name of the function.<br>
+                                A list of arguments to the function, enclosed in parentheses and separated by commas.<br>
+                                The JavaScript statements that define the function, enclosed in curly brackets, { }.<br>
+
+                            For example, the following code defines a simple function named square:<br><br>
+                            <code>function square(number) { return number * number; }</code><br><br>
+
+                            The function square takes one argument, called number. The function consists of one statement that says to return the argument of the
+                            function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.<br><br>
+                            <code>return number * number;</code><br><br>
+
+                            Primitive parameters (such as a number) are passed to functions by value; the value is
+                            passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function. </p>
+                        </p>
+                  </section>
+                </div>
+            </main>
+          </div>
+
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
